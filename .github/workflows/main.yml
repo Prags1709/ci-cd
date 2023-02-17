@@ -1,1 +1,14 @@
 #workflows
+name: Github action ofr
+on: 
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print node version
+        run: node --version
+      - name: Print NPM version
+        run: npm --version 
