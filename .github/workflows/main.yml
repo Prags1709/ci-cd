@@ -1,15 +1,18 @@
-name: Github action ofr
-on: 
+name: ESLint Check
+on:
   push:
-    branches: [master]
+    branches:
+      - main
 jobs:
-  build:
+  eslint-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Print node version
-        run: node --version
-      - name: Print NPM version
-        run: npm --version 
-      - name: Print pw
-        run: pwd
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Node.js and ESLint
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - run: npm install eslint
+      - name: Run ESLint
+        run: npx eslint .
