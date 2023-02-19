@@ -1,5 +1,6 @@
 name: Print Node Version
-on: push
+on: 
+  push:
 jobs:
   print-version:
     runs-on: ubuntu-latest
