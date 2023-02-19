@@ -1,4 +1,3 @@
-#workflows
 name: Github action ofr
 on: 
   push:
@@ -12,5 +11,5 @@ jobs:
         run: node --version
       - name: Print NPM version
         run: npm --version 
-      - name: Print pwt
-        run: pwt
+      - name: Print pw
+        run: pwd
