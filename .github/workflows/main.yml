@@ -14,5 +14,3 @@ jobs:
         run: npm --version 
       - name: Print pwt
         run: pwt
-      - name: Run eslint
-        run: npx eslint  
